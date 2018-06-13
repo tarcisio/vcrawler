@@ -1,3 +1,3 @@
 docker build -t vcrawler .
-docker run -v $(pwd):/usr/src/app vcrawler crawl growpower -o out.jl
-docker run --entrypoint python3 -v $(pwd):/usr/src/app vcrawler report.py > report.html
+docker run -v $(pwd):/app vcrawler crawl growpower -o products.jl
+docker run --entrypoint python -v $(pwd):/app vcrawler report.py > report.html
